@@ -56,20 +56,6 @@ flowchart TD
 
 ---
 
-## ⚙️ Requisitos Técnicos
-O sistema deve:  
-- 📦 Conter **dois microserviços independentes**  
-- 🚀 Utilizar **Spring Boot** em todos os micro serviços  
-- 🔍 Usar **Spring Cloud Eureka** como Service Discovery  
-- ☁️ Utilizar **Spring Cloud Gateway** como API Gateway  
-- 📡 Expor APIs REST com boas práticas  
-
-### ✅ Garantias
-- **Micro de serviço para gerenciar produtos** deve ser acessível por `/products`  
-- **Micro de serviço para simular pedidos** deve ser acessível por `/order/simulate`  
-- Todos os endpoints devem ser acessados **via API Gateway**
-
----
 
 ## 🌐 Serviços e Portas
 | Serviço | Portas |
@@ -150,6 +136,6 @@ O sistema deve:
 ---
 
 
-## 👨‍💻 Autor
-Dimitri Vinicius da Silva Ferraz
+## 👨‍💻 Autor - Dimitri Vinicius da Silva Ferraz
+
 Desenvolvido como desafio técnico proposto pela **NTT Data e DIO**.  
