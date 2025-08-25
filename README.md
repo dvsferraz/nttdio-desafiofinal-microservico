@@ -1,4 +1,4 @@
-# 🚀 Desafio Técnico – Microsserviços (Spring Boot + Spring Cloud)
+# 🚀 Desafio Técnico NTT Data e DIO – Micro serviços (Spring Boot + Spring Cloud)
 
 ## 📖 Descrição
 Esse projeto foi desenvolvido para simular a criação/listagem de produtos como também a simulação de pedidos.
@@ -11,7 +11,7 @@ As tecnologias principais são:
 O objetivo é aplicar conceitos modernos de arquitetura:  
 ✅ **Service Discovery**  
 ✅ **API Gateway**  
-✅ **Comunicação entre microsserviços**  
+✅ **Comunicação entre micro serviços**  
 ✅ **Persistência de dados**  
 ✅ **Boas práticas REST**
 
@@ -59,20 +59,20 @@ flowchart TD
 ## ⚙️ Requisitos Técnicos
 O sistema deve:  
 - 📦 Conter **dois microserviços independentes**  
-- 🚀 Utilizar **Spring Boot** em todos os microsserviços  
+- 🚀 Utilizar **Spring Boot** em todos os micro serviços  
 - 🔍 Usar **Spring Cloud Eureka** como Service Discovery  
--  Utilizar **Spring Cloud Gateway** como API Gateway  
+- ☁️ Utilizar **Spring Cloud Gateway** como API Gateway  
 - 📡 Expor APIs REST com boas práticas  
 
 ### ✅ Garantias
-- **Microserviço 1** deve ser acessível por `/products`  
-- **Microserviço 2** deve ser acessível por `/order/simulate`  
+- **Micro de serviço para gerenciar produtos** deve ser acessível por `/products`  
+- **Micro de serviço para simular pedidos** deve ser acessível por `/order/simulate`  
 - Todos os endpoints devem ser acessados **via API Gateway**
 
 ---
 
-## 🌐 Portas
-| Serviço | Faixa de Portas |
+## 🌐 Serviços e Portas
+| Serviço | Portas |
 |---------|----------------|
 | 🛒 Microservice 1 – Produtos | `8100` |
 | 📦 Microservice 2 – Pedidos | `8200` |
@@ -89,8 +89,8 @@ O sistema deve:
 ### 🚀 Passos
 1. **Clonar o repositório**  
    ```bash
-   git clone https://github.com/seu-repo/desafio-microservicos.git
-   cd desafio-microservicos
+   git clone git@github.com:dvsferraz/nttdio-desafiofinal-microservico.git
+   cd nttdio-desafio-microservicos
    ```
 2. **Subir o Service Discovery (Eureka)**  
    ```bash
@@ -114,7 +114,6 @@ O sistema deve:
    ```
    POST http://localhost:8700/product-catalog-service/products/create
    GET http://localhost:8700/product-catalog-service/products/all
-   GET http://localhost:8700/product-catalog-service/products/all
    POST http://localhost:8700/order-simulator/order/simulate 
    ```
 
@@ -122,7 +121,7 @@ O sistema deve:
 
 ## 📡 Exemplos de Endpoints
 
-### 🛒 Microserviço 1 – Produtos
+### 🛒 Micro serviço de gestão de produtos
 - `POST /product-catalog-service/products/create` → Cadastrar produto  
   ```json
   {
@@ -137,7 +136,7 @@ O sistema deve:
 
 ---
 
-### 📦 Microserviço 2 – Pedidos
+### 📦 Micro serviço de simular pedidos
 - `POST /order-simulator/order/simulate` → Simula pedidos com base em uma lista de produtos e suas quantidades  
   ```json
   {
@@ -153,4 +152,4 @@ O sistema deve:
 
 ## 👨‍💻 Autor
 Dimitri Vinicius da Silva Ferraz
-Desenvolvido como desafio técnico proposto pela **NTT Data**.  
+Desenvolvido como desafio técnico proposto pela **NTT Data e DIO**.  
